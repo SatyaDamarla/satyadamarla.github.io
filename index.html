@@ -7,7 +7,7 @@
   <meta name="description" content="Satya Damarla — AI/ML Engineer building LLM agents, RAG pipelines, and real-time ML systems at Intuit." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -51,14 +51,12 @@
     .space-glow-1 { width: 600px; height: 600px; top: -10%; left: -10%; background: rgba(124,58,237,0.25); }
     .space-glow-2 { width: 500px; height: 500px; bottom: 10%; right: -10%; background: rgba(236,72,153,0.16); }
 
-    /* accent display font used inside section headings */
+    /* accent treatment used inside section headings — same typeface, gradient fill only */
     .accent-font {
-      font-family: 'Orbitron', 'Inter', sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: 0.01em;
     }
 
     /* ── SCROLL PROGRESS ── */
@@ -238,11 +236,11 @@
       border: 1px solid var(--border);
       border-radius: var(--r);
       padding: 1.5rem;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, transform 0.2s;
       overflow: hidden;
       position: relative;
     }
-    .bento-card:hover { border-color: var(--border-h); }
+    .bento-card:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-2px); }
     .bento-wide { grid-column: span 2; }
     .bento-tall { grid-row: span 2; }
     .bento-full { grid-column: span 3; }
@@ -533,7 +531,7 @@
     /* ── UTILS ── */
     .opacity-0 {
       opacity: 0; transform: translateY(16px);
-      transition: opacity 0.55s cubic-bezier(.22,1,.36,1), transform 0.55s cubic-bezier(.22,1,.36,1);
+      transition: opacity 0.55s cubic-bezier(.22,1,.36,1), transform 0.55s cubic-bezier(.22,1,.36,1), border-color 0.2s;
     }
     .opacity-0.in-view { opacity: 1; transform: translateY(0); }
 
